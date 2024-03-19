@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Overview General Goods Inc.</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+	<header>
+        <h1>Overview General Goods Inc.</h1>
+    </header>
+  <nav>
+    <a href="employees.html">Employees</a>
+    <a href="customers.html">Customers</a>
+    <a href="stores.html">Stores</a>
+    <a href="sales.html">Sales</a>
+    <a href="items.html">Items</a>
+    <a href="staffings.html">Staffings</a>
+    <a href="inventories.html">Inventories</a>
+
+  </nav>
+    <table>
+        <tr>
+          <th><a href="#">New</a></th>
+          <th></th>
+          <th>Employee ID</th>
+          <th>Store ID</th>
+          <th>Hours Worked</th>
+        </tr>
+        <tr>
+          <td><a href="#" onClick="updateStaffing('this.staffingID')">Edit</a></td>
+          <td><a href="#" onclick="deleteStaffing('this.staffingID')">Delete</a></td>
+          <td>1</td>
+          <td >1</td>
+          <td>1500</td>
+        </tr>
+        <tr>
+            <td><a href="#" onClick="updateStaffing('this.staffingID')">Edit</a></td>
+            <td><a href="#" onclick="deleteStaffing('this.staffingID')">Delete</a></td>
+          <td>1</td>
+          <td>3</td>
+          <td >500</td>
+        </tr>
+        <tr>
+            <td><a href="#" onClick="updateStaffing('this.staffingID')">Edit</a></td>
+            <td><a href="#" onclick="deleteStaffing('this.staffingID')">Delete</a></td>
+          <td>2</td>
+          <td>3</td>
+          <td>1700</td>
+        </tr>
+        <tr>
+          <td><a href="#" onClick="updatePerson('this.personID')">Edit</a></td>
+          <td><a href="#" onclick="deletePerson('this.personID')">Delete</a></td>
+          <td>3</td>
+          <td>1</td>
+          <td>1300</td>
+        </tr>
+        <tr>
+          <td><a href="#" onClick="updatePerson('this.personID')">Edit</a></td>
+          <td><a href="#" onclick="deletePerson('this.personID')">Delete</a></td>
+          <td>3</td>
+          <td>2</td>
+          <td>700</td>
+        </tr>
+      </table>
+
+      
+      <div id="insert">
+        <form method="POST" id="addStaffing">
+            <legend><strong>Add Staffing</strong></legend>
+              <fieldset class="fields">
+                <label> Employee ID </label> <select name="employeeID">
+                    <option value="0">&nbsp;</option>
+                    <option value="1">Josh Smith</option>
+                    <option value="2">James Russell</option>
+                    <option value="3">Jane Rowling</option>
+                    </select>
+                    <label> Store ID </label> <select name="storeID">
+                        <option value="0">&nbsp;</option>
+                        <option value="1">1 Austin</option>
+                        <option value="2">2 Dallas</option>
+                        <option value="3">3 Houston</option>
+                        </select>
+                <label> Hours Worked </label> <input type="number" name="hoursWorked">
+          </fieldset>
+              <input class="btn" type="submit" id="addStaffing" value="Add staffing">
+              <input class="btn" type="button" value="cancel">
+        </form> 
+    </div><!-- insert -->
+    
+    <p>&nbsp;</p>
+    <div id="update">
+        <form method="POST" id="StoreUpdate">
+            <legend><strong>Update Staffing</strong></legend>
+              <fieldset class="fields">
+                <label> Employee ID </label> <select name="employeeID">
+                    <option value="0">&nbsp;</option>
+                    <option value="1">Josh Smith</option>
+                    <option value="2">James Russell</option>
+                    <option value="3">Jane Rowling</option>
+                    </select>
+                    <label> Store ID </label> <select name="storeID">
+                        <option value="0">&nbsp;</option>
+                        <option value="1">1 Austin</option>
+                        <option value="2">2 Dallas</option>
+                        <option value="3">3 Houston</option>
+                        </select>
+                        <label> Hours Worked </label> <input type="number" name="hoursWorked">
+          </fieldset>
+              <input class="btn" type="submit" id="UpdateStaffing" value="Update staffing">
+              <input class="btn" type="button" value="cancel">
+        </form> 
+    </div><!-- update -->
+    <p>&nbsp;</p>
+    <div id="delete" style="display: block">
+      <form method="POST" id="deletestore">
+          <legend><strong>Delete Staffing</strong></legend>
+              <fieldset class="fields">
+              <p>Are you sure you wish to delete the following store?</p>
+              <input type="hidden" name="storeID" id="deleteStaffingID" value="1">
+              <label><strong>Employee ID </strong></label> 1 (Austin Smith)
+            <label> <strong>Store ID</strong> </label> 1 Austin
+            <label> <strong>Hours Worked</strong> </label> 1500
+                
+        </fieldset>
+        <input class="btn" type="submit" id="DeleteStaffing" value="Delete staffing">
+              <input class="btn" type="button" value="cancel">
+      </form> 
+    </div>
+</html>
+
+  

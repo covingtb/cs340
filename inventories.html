@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Overview General Goods Inc.</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+	<header>
+        <h1>Overview General Goods Inc.</h1>
+    </header>
+  <nav>
+    <a href="employees.html">Employees</a>
+    <a href="customers.html">Customers</a>
+    <a href="stores.html">Stores</a>
+    <a href="sales.html">Sales</a>
+    <a href="items.html">Items</a>
+    <a href="staffings.html">Staffings</a>
+    <a href="inventories.html">Inventories</a>
+
+  </nav>
+    <table>
+        <tr>
+          <th><a href="#">New</a></th>
+          <th></th>
+          <th>Item ID</th>
+          <th>Store ID</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td><a href="#" onClick="updateInventory('this.inventoryID')">Edit</a></td>
+          <td><a href="#" onclick="deleteInventory('this.inventoryID')">Delete</a></td>
+          <td>2</td>
+          <td >1</td>
+          <td>35</td>
+        </tr>
+        <tr>
+            <td><a href="#" onClick="updateInventory('this.inventoryID')">Edit</a></td>
+            <td><a href="#" onclick="deleteInventory('this.inventoryID')">Delete</a></td>
+          <td>2</td>
+          <td>2</td>
+          <td >12</td>
+        </tr>
+        <tr>
+            <td><a href="#" onClick="updateInventory('this.inventoryID')">Edit</a></td>
+            <td><a href="#" onclick="deleteInventory('this.inventoryID')">Delete</a></td>
+          <td>2</td>
+          <td>3</td>
+          <td>17</td>
+        </tr>
+        <tr>
+            <td><a href="#" onClick="updatePerson('this.personID')">Edit</a></td>
+            <td><a href="#" onclick="deletePerson('this.personID')">Delete</a></td>
+            <td>1</td>
+            <td>1</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td><a href="#" onClick="updatePerson('this.personID')">Edit</a></td>
+            <td><a href="#" onclick="deletePerson('this.personID')">Delete</a></td>
+            <td>5</td>
+            <td>2</td>
+            <td>120</td>
+        </tr>
+        <tr>
+            <td><a href="#" onClick="updatePerson('this.personID')">Edit</a></td>
+            <td><a href="#" onclick="deletePerson('this.personID')">Delete</a></td>
+            <td>5</td>
+            <td>1</td>
+            <td>80</td>
+        </tr>
+      </table>
+
+      <div id="insert">
+        <form method="POST" id="addInventory">
+            <legend><strong>Add Inventory</strong></legend>
+              <fieldset class="fields">
+                <label> Item ID </label> <select name="ItemID">
+                    <option value="0">&nbsp;</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                    <label> Store ID </label> <select name="storeID">
+                        <option value="0">&nbsp;</option>
+                        <option value="1">1 Austin</option>
+                        <option value="2">2 Dallas</option>
+                        <option value="3">3 Houston</option>
+                        </select>
+                <label> Quantity </label> <input type="number" name="quantity">
+          </fieldset>
+              <input class="btn" type="submit" id="addInventory" value="Add Inventory">
+              <input class="btn" type="button" value="cancel">
+        </form> 
+    </div><!-- insert -->
+    
+    <p>&nbsp;</p>
+    <div id="update">
+        <form method="POST" id="StoreUpdate">
+            <legend><strong>Update Inventory</strong></legend>
+              <fieldset class="fields">
+                <label> Item ID </label> <select name="ItemID">
+                    <option value="0">&nbsp;</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                    <label> Store ID </label> <select name="storeID">
+                        <option value="0">&nbsp;</option>
+                        <option value="1">1 Austin</option>
+                        <option value="2">2 Dallas</option>
+                        <option value="3">3 Houston</option>
+                        </select>
+                        <label> Quantity </label> <input type="number" name="quantity">
+          </fieldset>
+              <input class="btn" type="submit" id="UpdateInventory" value="Update inventory">
+              <input class="btn" type="button" value="cancel">
+        </form> 
+    </div><!-- update -->
+    <p>&nbsp;</p>
+    <div id="delete" style="display: block">
+      <form method="POST" id="deletestore">
+          <legend><strong>Delete Inventory</strong></legend>
+              <fieldset class="fields">
+              <p>Are you sure you wish to delete the following store?</p>
+              <input type="hidden" name="storeID" id="deletestoreID" value="1">
+              <label><strong>Item ID </strong></label> 1 (Austin Smith)
+            <label> <strong>Store ID</strong> </label> 1 Austin
+            <label> <strong>Quantity</strong> </label> 1500
+                
+        </fieldset>
+        <input class="btn" type="submit" id="DeleteInventory" value="Delete Inventory">
+              <input class="btn" type="button" value="cancel">
+      </form> 
+    </div>
+</html>
+
+  
